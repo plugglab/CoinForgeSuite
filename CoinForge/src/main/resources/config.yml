@@ -1,0 +1,92 @@
+# =========================================================
+#  CoinForge configuration
+# =========================================================
+
+# The "main" coin. When enabled + registered with Vault, CoinForge becomes
+# the server's Vault economy provider itself - overriding EssentialsX, CMI,
+# or any other economy plugin, the same way those plugins override each
+# other. Balances are stored and owned by CoinForge (data/coins.yml),
+# never delegated to another plugin.
+vault-currency:
+  # Master switch. Set to false to disable the vault coin entirely -
+  # CoinForge then runs in "custom currencies only" mode.
+  enabled: true
+
+  # If true, CoinForge registers itself with Vault so shops, EssentialsX
+  # commands, and any other Vault-aware plugin use THIS coin.
+  # If false, the coin still works through /coins but Vault (and any
+  # plugin that reads it) keeps using whatever economy is already
+  # registered - e.g. keep this false to run CoinForge's main coin
+  # purely as an internal currency alongside your existing economy plugin.
+  register-with-vault: true
+
+  # Vault only ever uses the single highest-priority registered provider.
+  # HIGHEST guarantees CoinForge overrides Essentials/CMI/etc.
+  # Use NORMAL if you only want CoinForge to act as a fallback when no
+  # other economy plugin is present.
+  # One of: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+  priority: HIGHEST
+
+  id: coins
+  display-name: "Coins"
+  symbol: "$"
+  decimal-places: 2
+  starting-balance: 0
+  # Icon shown for this coin in /coins gui and /coins top's leaderboard menu.
+  icon: GOLD_INGOT
+
+# Any number of custom currencies, always managed by CoinForge, always
+# independent of Vault.
+custom-currencies:
+  gems:
+    display-name: "Gems"
+    symbol: "✦"
+    decimal-places: 0
+    starting-balance: 0
+    icon: EMERALD
+
+  tokens:
+    display-name: "Tokens"
+    symbol: "⛃ "
+    decimal-places: 0
+    starting-balance: 100
+    icon: SUNFLOWER
+
+# Lets players convert one coin into another with /coins exchange <from> <to> <amount>.
+# The vault coin can be used on either side just like any custom coin.
+exchange:
+  enabled: true
+  # format: "<from>-to-<to>": rate
+  # 1 unit of <from> converts into <rate> units of <to>
+  rates:
+    gems-to-coins: 10
+    tokens-to-gems: 0.5
+
+# Seconds a player must wait between uses of /coins pay. 0 disables it.
+pay-cooldown-seconds: 3
+
+# Append every pay/admin/exchange transaction to plugins/CoinForge/transactions.log
+log-transactions: true
+
+# Skims a percentage off the top of pay/exchange as a currency sink - the
+# taxed portion is simply destroyed, not given to anyone. The sender still
+# pays the full amount they typed; the recipient gets less. Set to 0 to
+# disable. Players with coinforge.tax.bypass pay no tax at all.
+tax:
+  pay-percent: 0
+  exchange-percent: 0
+
+# Periodically pays players a percentage of their balance as interest, like
+# a savings account. Applies per-currency, so you can enable it for the
+# vault coin only, custom coins only, or any mix.
+interest:
+  enabled: false
+  interval-minutes: 60
+  rate-percent: 1.0
+  # Coins with a balance below this don't earn interest (skips empty accounts).
+  minimum-balance: 1.0
+  # If true, only currently-online players are paid each cycle. If false,
+  # every stored account is paid regardless of whether they're online.
+  only-online-players: false
+  # Which coin IDs accrue interest. Must match currency IDs above.
+  currencies: [coins]

@@ -1,0 +1,27 @@
+name: ShopForge
+version: '${version}'
+main: dev.shopforge.plugin.ShopForge
+# Higher than CoinForge's api-version (1.13) because ShopForge's compiled
+# bytecode targets Java 21 (required by paper-api itself - see build.gradle),
+# which can't load on the older JVMs that pre-1.20.5 servers typically run.
+api-version: '1.20'
+author: CoinForge
+description: A GUI shop plugin that buys and sells using any CoinForge coin.
+depend: [CoinForge]
+
+commands:
+  shop:
+    description: Open the shop.
+    usage: /<command> [reload|sellhand]
+    aliases: [shopforge, store]
+
+permissions:
+  shopforge.use:
+    description: Allows opening the shop and buying/selling.
+    default: true
+  shopforge.admin:
+    description: Allows reloading the shop configuration.
+    default: op
+  # Per-category permissions (shopforge.category.<id>, e.g. shopforge.category.blocks)
+  # are registered dynamically from shops.yml at load time, default true.
+  # Set one to false for a specific player/group to hide that category from them.

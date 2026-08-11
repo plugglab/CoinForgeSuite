@@ -1,0 +1,6 @@
+# Project exclude paths
+/.gradle/
+/CoinForge/build/
+/CoinForge/build/classes/java/main/
+/ShopForge/build/
+/ShopForge/build/classes/java/main/

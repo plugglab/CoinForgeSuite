@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.coinforge'
+version = '1.1.0'
+
+description = 'Multi-coin economy: an overridable Vault-backed coin plus unlimited custom coins.'
+
+repositories {
+    mavenCentral()
+    // Spigot API, pinned to 1.21.11 - the last Minecraft version before
+    // Mojang/Paper switched to a new year-based versioning scheme (26.1,
+    // 26.2, ...) in 2026. Newer Paper artifacts (26.x) require a Java 25
+    // toolchain to even resolve as a dependency, which would force this
+    // whole project onto Java 25 bytecode and break compatibility with
+    // older servers - CoinForge doesn't need anything from Paper's API,
+    // so there's no reason to pay that cost here.
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    // Vault API
+    maven { url = 'https://jitpack.io' }
+    // PlaceholderAPI (optional soft-dependency)
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21.11-R0.1-SNAPSHOT'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+    compileOnly 'me.clip:placeholderapi:2.11.5'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand(version: project.version)
+    }
+}
+
+jar {
+    archiveBaseName.set('CoinForge')
+    archiveVersion.set(project.version.toString())
+}

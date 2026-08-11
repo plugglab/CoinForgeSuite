@@ -1,0 +1,64 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.shopforge'
+version = '1.0.0'
+description = 'GUI shop plugin that buys and sells using any CoinForge coin.'
+
+repositories {
+    mavenCentral()
+    // Paper API - a superset of Spigot API (same org.bukkit.* classes plus
+    // extras), used here specifically so we can optionally use the new
+    // Dialog menus (added in Minecraft 1.21.6, exposed by Paper's API since
+    // 1.21.7). Everything Dialog-related is guarded behind a runtime check
+    // (see dialog/DialogSupport.java) so the plugin still loads and works
+    // normally - just without native dialogs - on plain Spigot or on Paper
+    // builds older than 1.21.7.
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    // Pinned to 1.21.11 - the last version before Paper's 2026 versioning
+    // scheme change (26.1, 26.2, ...). 1.21.11 already includes the Dialog
+    // API (added in 1.21.7), and unlike 26.x builds it doesn't require a
+    // Java 25 toolchain to even resolve as a dependency - Gradle's variant
+    // matching rejects newer Paper builds outright on a Java 8-targeted
+    // project, since their published module metadata declares a Java 25
+    // minimum. Bump this only if you specifically need something from a
+    // Paper API version newer than 1.21.11, and be ready to also raise
+    // sourceCompatibility/targetCompatibility below to match.
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+    // No repository needed for this - Gradle resolves it straight from the sibling module.
+    compileOnly project(':CoinForge')
+}
+
+java {
+    // Paper's published module metadata declares a Java 21 minimum for
+    // paper-api itself (this is unrelated to the earlier 26.x/Java 25 issue -
+    // it applies even to the 1.21.11 build pinned above). That's not really
+    // a cost specific to this plugin: Paper has required Java 21 to even
+    // *run* the server since Minecraft 1.20.5, so anyone whose server can
+    // actually load ShopForge's Dialog feature already has Java 21 installed
+    // regardless. CoinForge stays on Java 8 (see its own build.gradle) since
+    // it depends on plain Spigot API, which doesn't carry this same
+    // Gradle-enforced minimum.
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand(version: project.version)
+    }
+}
+
+jar {
+    archiveBaseName.set('ShopForge')
+    archiveVersion.set(project.version.toString())
+}

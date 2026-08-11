@@ -1,0 +1,42 @@
+gui-title: "&8Shop"
+
+# Rows of items shown per category page (1-5). The row below this is
+# always reserved for Back / Previous / Next buttons.
+rows-per-page: 5
+
+# Icon material for the search button in the main menu.
+search-icon: "COMPASS"
+
+# Sound played on buy/sell. Leave blank ("") to disable. If the name isn't
+# valid on your server version, it's silently skipped rather than erroring.
+buy-sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+sell-sound: "ENTITY_ITEM_PICKUP"
+
+# Require a second click within timeout-seconds to confirm any single
+# buy/sell whose total value is at or above the threshold. Set threshold
+# to -1 to disable confirmations entirely. Only used as a fallback when
+# native dialogs (see below) aren't available.
+confirm-purchases:
+  threshold: 1000
+  timeout-seconds: 5
+
+# Minecraft 1.21.6 added native "Dialog" menus, exposed to plugins by Paper
+# since 1.21.7. When running on a server that supports them, ShopForge uses
+# a proper text-input dialog for search and a proper Yes/No dialog for big
+# purchase confirmations, instead of the chat-prompt / click-twice fallback.
+# Set to false to always use the fallback behavior even where dialogs are
+# available.
+use-native-dialogs: true
+
+messages:
+  not-enough-funds: "&cYou don't have enough %currency%."
+  not-enough-items: "&cYou don't have any of that to sell."
+  inventory-full: "&eYour inventory was full - the rest dropped at your feet."
+  bought: "&aBought %amount%x %item% for %price%."
+  sold: "&aSold %amount%x %item% for %price%."
+  confirm: "&eThat will cost %price%. Click again within %seconds%s to confirm."
+  no-buy-price: "&cThat item can't be bought."
+  no-sell-price: "&cThat item can't be sold here."
+  search-prompt: "&eType the item name in chat, or 'cancel' to abort."
+  search-cancelled: "&cSearch cancelled."
+  search-no-results: "&cNo items found matching '%query%'."

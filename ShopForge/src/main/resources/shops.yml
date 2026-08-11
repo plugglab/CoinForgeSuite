@@ -1,0 +1,690 @@
+categories:
+  blocks:
+    display-name: "&aBuilding Blocks"
+    icon: GRASS_BLOCK
+    items:
+      dirt:
+        material: DIRT
+        display-name: "&fDirt"
+        buy-price: 1.0
+        sell-price: 0.5
+        currency: coins
+      cobblestone:
+        material: COBBLESTONE
+        display-name: "&7Cobblestone"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      stone:
+        material: STONE
+        display-name: "&7Stone"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      andesite:
+        material: ANDESITE
+        display-name: "&7Andesite"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      diorite:
+        material: DIORITE
+        display-name: "&fDiorite"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      granite:
+        material: GRANITE
+        display-name: "&cGranite"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      sand:
+        material: SAND
+        display-name: "&eSand"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      gravel:
+        material: GRAVEL
+        display-name: "&7Gravel"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      sandstone:
+        material: SANDSTONE
+        display-name: "&eSandstone"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      bricks:
+        material: BRICKS
+        display-name: "&cBricks"
+        buy-price: 5.0
+        sell-price: 2.5
+        currency: coins
+      glass:
+        material: GLASS
+        display-name: "&bGlass"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      obsidian:
+        material: OBSIDIAN
+        display-name: "&5Obsidian"
+        buy-price: 40.0
+        sell-price: 20.0
+        currency: coins
+
+  ores-and-gems:
+    display-name: "&bOres & Gems"
+    icon: DIAMOND
+    items:
+      coal:
+        material: COAL
+        display-name: "&8Coal"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      redstone:
+        material: REDSTONE
+        display-name: "&cRedstone Dust"
+        buy-price: 5.0
+        sell-price: 2.5
+        currency: coins
+      lapis-lazuli:
+        material: LAPIS_LAZULI
+        display-name: "&9Lapis Lazuli"
+        buy-price: 6.0
+        sell-price: 3.0
+        currency: coins
+      quartz:
+        material: QUARTZ
+        display-name: "&fNether Quartz"
+        buy-price: 8.0
+        sell-price: 4.0
+        currency: coins
+      iron-ingot:
+        material: IRON_INGOT
+        display-name: "&fIron Ingot"
+        buy-price: 15.0
+        sell-price: 8.0
+        currency: coins
+      gold-ingot:
+        material: GOLD_INGOT
+        display-name: "&6Gold Ingot"
+        buy-price: 30.0
+        sell-price: 16.0
+        currency: coins
+      diamond:
+        material: DIAMOND
+        display-name: "&bDiamond"
+        buy-price: 250.0
+        sell-price: 150.0
+        currency: coins
+      emerald:
+        material: EMERALD
+        display-name: "&aEmerald"
+        buy-price: 120.0
+        sell-price: 70.0
+        currency: coins
+      netherite-scrap:
+        material: NETHERITE_SCRAP
+        display-name: "&8Netherite Scrap"
+        lore:
+          - "&7Extremely rare - buy only."
+        buy-price: 1200.0
+        currency: coins
+
+  food-and-farming:
+    display-name: "&6Food & Farming"
+    icon: BREAD
+    items:
+      wheat:
+        material: WHEAT
+        display-name: "&eWheat"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      bread:
+        material: BREAD
+        display-name: "&6Bread"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      carrot:
+        material: CARROT
+        display-name: "&6Carrot"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      potato:
+        material: POTATO
+        display-name: "&ePotato"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      baked-potato:
+        material: BAKED_POTATO
+        display-name: "&6Baked Potato"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      apple:
+        material: APPLE
+        display-name: "&cApple"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      melon-slice:
+        material: MELON_SLICE
+        display-name: "&aMelon Slice"
+        buy-price: 1.5
+        sell-price: 0.75
+        currency: coins
+      pumpkin-pie:
+        material: PUMPKIN_PIE
+        display-name: "&6Pumpkin Pie"
+        buy-price: 6.0
+        sell-price: 3.0
+        currency: coins
+      cooked-beef:
+        material: COOKED_BEEF
+        display-name: "&6Steak"
+        buy-price: 6.0
+        sell-price: 3.0
+        currency: coins
+      cooked-chicken:
+        material: COOKED_CHICKEN
+        display-name: "&6Cooked Chicken"
+        buy-price: 5.0
+        sell-price: 2.5
+        currency: coins
+      cooked-porkchop:
+        material: COOKED_PORKCHOP
+        display-name: "&6Cooked Porkchop"
+        buy-price: 6.0
+        sell-price: 3.0
+        currency: coins
+      cooked-salmon:
+        material: COOKED_SALMON
+        display-name: "&6Cooked Salmon"
+        buy-price: 5.0
+        sell-price: 2.5
+        currency: coins
+      golden-apple:
+        material: GOLDEN_APPLE
+        display-name: "&6Golden Apple"
+        lore:
+          - "&7A rare healing treat."
+        buy-price: 80.0
+        sell-price: 40.0
+        currency: coins
+
+  wood-and-nature:
+    display-name: "&2Wood & Nature"
+    icon: OAK_LOG
+    items:
+      oak-log:
+        material: OAK_LOG
+        display-name: "&6Oak Log"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      spruce-log:
+        material: SPRUCE_LOG
+        display-name: "&8Spruce Log"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      birch-log:
+        material: BIRCH_LOG
+        display-name: "&fBirch Log"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      jungle-log:
+        material: JUNGLE_LOG
+        display-name: "&2Jungle Log"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      acacia-log:
+        material: ACACIA_LOG
+        display-name: "&6Acacia Log"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      dark-oak-log:
+        material: DARK_OAK_LOG
+        display-name: "&8Dark Oak Log"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      oak-planks:
+        material: OAK_PLANKS
+        display-name: "&6Oak Planks"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      ladder:
+        material: LADDER
+        display-name: "&6Ladder"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      torch:
+        material: TORCH
+        display-name: "&eTorch"
+        buy-price: 1.0
+        sell-price: 0.5
+        currency: coins
+      sugar-cane:
+        material: SUGAR_CANE
+        display-name: "&aSugar Cane"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+
+  combat-and-gear:
+    display-name: "&cCombat & Gear"
+    icon: DIAMOND_SWORD
+    items:
+      iron-sword:
+        material: IRON_SWORD
+        display-name: "&fIron Sword"
+        buy-price: 60.0
+        currency: coins
+      diamond-sword:
+        material: DIAMOND_SWORD
+        display-name: "&bDiamond Sword"
+        buy-price: 300.0
+        currency: coins
+      bow:
+        material: BOW
+        display-name: "&6Bow"
+        buy-price: 50.0
+        currency: coins
+      arrow:
+        material: ARROW
+        display-name: "&fArrow"
+        buy-price: 1.0
+        sell-price: 0.4
+        currency: coins
+      shield:
+        material: SHIELD
+        display-name: "&7Shield"
+        buy-price: 45.0
+        currency: coins
+      iron-helmet:
+        material: IRON_HELMET
+        display-name: "&fIron Helmet"
+        buy-price: 45.0
+        currency: coins
+      iron-chestplate:
+        material: IRON_CHESTPLATE
+        display-name: "&fIron Chestplate"
+        buy-price: 65.0
+        currency: coins
+      iron-leggings:
+        material: IRON_LEGGINGS
+        display-name: "&fIron Leggings"
+        buy-price: 60.0
+        currency: coins
+      iron-boots:
+        material: IRON_BOOTS
+        display-name: "&fIron Boots"
+        buy-price: 40.0
+        currency: coins
+
+  redstone-and-tech:
+    display-name: "&4Redstone & Tech"
+    icon: REDSTONE
+    items:
+      redstone-torch:
+        material: REDSTONE_TORCH
+        display-name: "&cRedstone Torch"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      repeater:
+        material: REPEATER
+        display-name: "&7Redstone Repeater"
+        buy-price: 8.0
+        sell-price: 4.0
+        currency: coins
+      comparator:
+        material: COMPARATOR
+        display-name: "&7Redstone Comparator"
+        buy-price: 10.0
+        sell-price: 5.0
+        currency: coins
+      piston:
+        material: PISTON
+        display-name: "&7Piston"
+        buy-price: 12.0
+        sell-price: 6.0
+        currency: coins
+      sticky-piston:
+        material: STICKY_PISTON
+        display-name: "&2Sticky Piston"
+        buy-price: 16.0
+        sell-price: 8.0
+        currency: coins
+      hopper:
+        material: HOPPER
+        display-name: "&8Hopper"
+        buy-price: 30.0
+        sell-price: 15.0
+        currency: coins
+      dispenser:
+        material: DISPENSER
+        display-name: "&7Dispenser"
+        buy-price: 20.0
+        sell-price: 10.0
+        currency: coins
+      observer:
+        material: OBSERVER
+        display-name: "&7Observer"
+        buy-price: 14.0
+        sell-price: 7.0
+        currency: coins
+      lever:
+        material: LEVER
+        display-name: "&7Lever"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+
+  wool-and-dye:
+    display-name: "&dWool & Dye"
+    icon: WHITE_WOOL
+    items:
+      white-wool:
+        material: WHITE_WOOL
+        display-name: "&fWhite Wool"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      red-wool:
+        material: RED_WOOL
+        display-name: "&cRed Wool"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      blue-wool:
+        material: BLUE_WOOL
+        display-name: "&9Blue Wool"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      black-wool:
+        material: BLACK_WOOL
+        display-name: "&8Black Wool"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      yellow-wool:
+        material: YELLOW_WOOL
+        display-name: "&eYellow Wool"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      red-dye:
+        material: RED_DYE
+        display-name: "&cRed Dye"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      blue-dye:
+        material: BLUE_DYE
+        display-name: "&9Blue Dye"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      bone-meal:
+        material: BONE_MEAL
+        display-name: "&fBone Meal"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+
+  gem-exchange:
+    display-name: "&dGem Exchange"
+    icon: NETHER_STAR
+    items:
+      mystery-token:
+        material: NETHER_STAR
+        display-name: "&dMystery Token"
+        lore:
+          - "&7A rare token bought with Gems."
+        buy-price: 50.0
+        currency: gems
+        # no sell-price -> can't be sold back
+      enchanted-golden-apple:
+        material: ENCHANTED_GOLDEN_APPLE
+        display-name: "&6Enchanted Golden Apple"
+        lore:
+          - "&7Top-tier healing item."
+        buy-price: 25.0
+        currency: gems
+      diamond-block:
+        material: DIAMOND_BLOCK
+        display-name: "&bBlock of Diamond"
+        buy-price: 20.0
+        sell-price: 12.0
+        currency: gems
+      emerald-block:
+        material: EMERALD_BLOCK
+        display-name: "&aBlock of Emerald"
+        buy-price: 10.0
+        sell-price: 6.0
+        currency: gems
+
+  token-shop:
+    display-name: "&5Token Shop"
+    icon: FIREWORK_ROCKET
+    items:
+      firework-rocket:
+        material: FIREWORK_ROCKET
+        display-name: "&dFirework Rocket"
+        buy-price: 5.0
+        currency: tokens
+      name-tag:
+        material: NAME_TAG
+        display-name: "&fName Tag"
+        buy-price: 8.0
+        currency: tokens
+      saddle:
+        material: SADDLE
+        display-name: "&6Saddle"
+        buy-price: 15.0
+        currency: tokens
+      ender-pearl:
+        material: ENDER_PEARL
+        display-name: "&5Ender Pearl"
+        buy-price: 6.0
+        currency: tokens
+      elytra:
+        material: ELYTRA
+        display-name: "&5Elytra"
+        lore:
+          - "&7The ultimate flight reward."
+        buy-price: 250.0
+        currency: tokens
+
+  tools:
+    display-name: "&eTools"
+    icon: IRON_PICKAXE
+    items:
+      wood-pickaxe:
+        material: WOODEN_PICKAXE
+        display-name: "&6Wooden Pickaxe"
+        buy-price: 10.0
+        currency: coins
+      stone-pickaxe:
+        material: STONE_PICKAXE
+        display-name: "&7Stone Pickaxe"
+        buy-price: 20.0
+        currency: coins
+      iron-pickaxe:
+        material: IRON_PICKAXE
+        display-name: "&fIron Pickaxe"
+        buy-price: 60.0
+        currency: coins
+      diamond-pickaxe:
+        material: DIAMOND_PICKAXE
+        display-name: "&bDiamond Pickaxe"
+        buy-price: 320.0
+        currency: coins
+      iron-axe:
+        material: IRON_AXE
+        display-name: "&fIron Axe"
+        buy-price: 55.0
+        currency: coins
+      diamond-axe:
+        material: DIAMOND_AXE
+        display-name: "&bDiamond Axe"
+        buy-price: 300.0
+        currency: coins
+      iron-shovel:
+        material: IRON_SHOVEL
+        display-name: "&fIron Shovel"
+        buy-price: 30.0
+        currency: coins
+      diamond-shovel:
+        material: DIAMOND_SHOVEL
+        display-name: "&bDiamond Shovel"
+        buy-price: 150.0
+        currency: coins
+      iron-hoe:
+        material: IRON_HOE
+        display-name: "&fIron Hoe"
+        buy-price: 25.0
+        currency: coins
+      fishing-rod:
+        material: FISHING_ROD
+        display-name: "&6Fishing Rod"
+        buy-price: 40.0
+        currency: coins
+      shears:
+        material: SHEARS
+        display-name: "&7Shears"
+        buy-price: 20.0
+        currency: coins
+      flint-and-steel:
+        material: FLINT_AND_STEEL
+        display-name: "&7Flint and Steel"
+        buy-price: 15.0
+        currency: coins
+
+  potions:
+    display-name: "&dPotions"
+    icon: POTION
+    items:
+      potion-healing:
+        material: POTION
+        display-name: "&cPotion of Healing"
+        lore:
+          - "&7Instantly restores health."
+        buy-price: 25.0
+        currency: coins
+      potion-swiftness:
+        material: POTION
+        display-name: "&fPotion of Swiftness"
+        lore:
+          - "&7Temporary speed boost."
+        buy-price: 20.0
+        currency: coins
+      potion-strength:
+        material: POTION
+        display-name: "&6Potion of Strength"
+        lore:
+          - "&7Temporary attack boost."
+        buy-price: 25.0
+        currency: coins
+      potion-fire-resistance:
+        material: POTION
+        display-name: "&6Potion of Fire Resistance"
+        lore:
+          - "&7Immune to fire and lava for a while."
+        buy-price: 30.0
+        currency: coins
+      potion-regeneration:
+        material: POTION
+        display-name: "&dPotion of Regeneration"
+        lore:
+          - "&7Slowly heals over time."
+        buy-price: 35.0
+        currency: coins
+      glass-bottle:
+        material: GLASS_BOTTLE
+        display-name: "&fGlass Bottle"
+        buy-price: 2.0
+        sell-price: 1.0
+        currency: coins
+      nether-wart:
+        material: NETHER_WART
+        display-name: "&4Nether Wart"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      blaze-powder:
+        material: BLAZE_POWDER
+        display-name: "&6Blaze Powder"
+        buy-price: 10.0
+        sell-price: 5.0
+        currency: coins
+
+  concrete-and-terracotta:
+    display-name: "&bConcrete & Terracotta"
+    icon: RED_CONCRETE
+    items:
+      white-concrete:
+        material: WHITE_CONCRETE
+        display-name: "&fWhite Concrete"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      red-concrete:
+        material: RED_CONCRETE
+        display-name: "&cRed Concrete"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      blue-concrete:
+        material: BLUE_CONCRETE
+        display-name: "&9Blue Concrete"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      black-concrete:
+        material: BLACK_CONCRETE
+        display-name: "&8Black Concrete"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      lime-concrete:
+        material: LIME_CONCRETE
+        display-name: "&aLime Concrete"
+        buy-price: 4.0
+        sell-price: 2.0
+        currency: coins
+      terracotta:
+        material: TERRACOTTA
+        display-name: "&6Terracotta"
+        buy-price: 3.0
+        sell-price: 1.5
+        currency: coins
+      white-terracotta:
+        material: WHITE_TERRACOTTA
+        display-name: "&fWhite Terracotta"
+        buy-price: 3.5
+        sell-price: 1.75
+        currency: coins
+      orange-terracotta:
+        material: ORANGE_TERRACOTTA
+        display-name: "&6Orange Terracotta"
+        buy-price: 3.5
+        sell-price: 1.75
+        currency: coins

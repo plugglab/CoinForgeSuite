@@ -1,0 +1,33 @@
+name: CoinForge
+version: '${version}'
+main: dev.coinforge.plugin.CoinForge
+api-version: 1.13
+author: CoinForge
+description: Multi-coin economy - an overridable Vault-backed coin plus unlimited custom coins.
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  coins:
+    description: View and manage your coin balances.
+    usage: /<command> [gui|pay|top|exchange|admin|reload|help]
+    aliases: [coin, wallet, balance, bal]
+
+permissions:
+  coinforge.use:
+    description: Allows checking your own balances.
+    default: true
+  coinforge.pay:
+    description: Allows paying other players.
+    default: true
+  coinforge.top:
+    description: Allows viewing top balance lists.
+    default: true
+  coinforge.exchange:
+    description: Allows converting one coin into another.
+    default: true
+  coinforge.admin:
+    description: Allows giving, taking, setting, resetting balances, and reloading config for any currency.
+    default: op
+  coinforge.tax.bypass:
+    description: Exempts a player from pay/exchange tax entirely.
+    default: false
